@@ -1,3 +1,6 @@
+""" Imports class bloglinks """
 from django.contrib import admin
+from .models import Bloglinks
 
-# Register your models here.
+
+admin.site.register(Bloglinks)
