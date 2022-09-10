@@ -1,11 +1,11 @@
 """Todo app models"""
 from django.shortcuts import render
-from .models import Item
+from .models import Bloglinks
 
 
 def get_todo_list(request):
     """ Function to render the todo list """
-    items = Item.objects.all()
+    items = Bloglinks.objects.all()
     context = {
         'items': items
     }
