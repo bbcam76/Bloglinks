@@ -2,14 +2,15 @@
 
 body {
     letter-spacing: 0.03em;
-    background-color: #7dc0fc;
+    background-color: #1B073A;
     font-family: 'Montserrat', serif;
+    font-weight: bold;
 }
 
 nav {
-    background-color: #5a8ebb;
+    background-color: #1e0543;
 }
 
 footer {
-    background-color: #e3e4e4;
+    background-color: #111112;
 }
