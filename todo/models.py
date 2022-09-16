@@ -8,10 +8,10 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Bloglinks(models.Model):
     """ model for user input """
-    user_name = models.CharField(max_length=70, null=False, blank=False, default=None)
+    user_name = models.CharField(max_length=150, null=False, blank=False, default=None)
     user_email = models.EmailField(max_length=35, default=None)
     user_done = models.BooleanField(null=False, blank=False, default=False)
-    title = models.CharField(max_length=200, null=False, blank=True, default=None)
+    title = models.CharField(max_length=200, null=False, blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField(default=None)
     featured_image = CloudinaryField('image', default='placeholder')
@@ -24,4 +24,4 @@ class Bloglinks(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return f"Comment {self.title} by {self.user_name}"
+        return f"Comment {self.user_name}"
