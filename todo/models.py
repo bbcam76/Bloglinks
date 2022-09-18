@@ -18,7 +18,6 @@ class Bloglinks(models.Model):
     excerpt = models.TextField(blank=True, default=None)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='blog_likes', blank=True, default=None)
 
     class Meta:
         ordering = ['-created_on']
