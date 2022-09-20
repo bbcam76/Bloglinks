@@ -1,6 +1,5 @@
 """Todo app models"""
 from django.db import models
-from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -24,3 +23,13 @@ class Bloglinks(models.Model):
 
     def __str__(self):
         return f"Comment {self.user_name}"
+
+
+class Comment(models.Model):
+    """ comments model """
+    post = models.ForeignKey(Bloglinks, on_delete=models.CASCADE, related_name="comments")
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
