@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
+{% load static %}
 {% block content %}
+
 
 <div class="container-fluid">
     <div class="row">
@@ -8,11 +10,13 @@
         <!--Blog Entries Column-->
         <div class="col-12 mt-3 left">
             <div class="row">
-                {% for post in bloglinks%}
+
+                <div>
+                    <h1>Welcome to Bloglinks</h1>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 
-{%endblock%}
+{% endblock %}

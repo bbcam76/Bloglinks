@@ -15,11 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from todo.views import get_todo_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_todo_list, name='get_todo_list'),
+    path('', include('home.urls')),
     path('summernote/', include('django_summernote.urls')),
 ]
 
