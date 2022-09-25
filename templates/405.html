@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<section class="section">
+    <div class="container">
+        <br>
+        <h1>405</h1>
+        <hr>
+        <h5>ERROR, This method is Not Allowed!.</h5>
+        <hr>
+        <h5>Please Return Back to previous</h5>
+        <hr>
+        <a class="btn btn-secondary" href="{% url 'home' %}">HOME</a>
+    </div>
+</section>
+
+
+{% endblock %}

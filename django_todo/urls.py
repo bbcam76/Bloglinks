@@ -22,3 +22,10 @@ urlpatterns = [
     path('', get_todo_list, name='get_todo_list'),
     path('summernote/', include('django_summernote.urls')),
 ]
+
+
+""" Error handler URL's """
+HANDLER500 = "django_todo.views.custom_500_error"
+HANDLER404 = "django_todo.views.custom_page_not_found"
+HANDLER403 = "django_todo.views.custom_403_error"
+HANDLER405 = "django_todo.views.custom_405_error"
