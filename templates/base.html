@@ -28,11 +28,12 @@
 <!-- Navbar from getbootstrap.com -->
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="{% url 'home' %}">Bloglinks</a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
@@ -40,6 +41,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Blog
                 </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Home</a></li>
+                    <li><a class="dropdown-item" href="#">Hub</a></li>
+                    <li><a class="dropdown-item" href="#">Links</a></li>
+                    <li><a class="dropdown-item" href="#">Stage</a></li>
+                    <li><a class="dropdown-item" href="#">Contact</a></li>
+                </ul>
             </li>
         </ul>
     </div>
