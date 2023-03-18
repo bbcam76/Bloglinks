@@ -7,7 +7,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Bloglinks(models.Model):
     """ model for user input """
-    user_name = models.CharField(max_length=150, null=False, blank=False, default=None)
+    user_name = models.CharField(max_length=150, null=False, blank=False, default=None) # noqa
     user_email = models.EmailField(max_length=35, default=None)
     user_done = models.BooleanField(null=False, blank=False, default=False)
     title = models.CharField(max_length=200, null=False, blank=True)
@@ -27,7 +27,7 @@ class Bloglinks(models.Model):
 
 class Comment(models.Model):
     """ Comments model """
-    post = models.ForeignKey(Bloglinks, on_delete=models.CASCADE, related_name="comments")
+    post = models.ForeignKey(Bloglinks, on_delete=models.CASCADE, related_name="comments") # noqa
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
