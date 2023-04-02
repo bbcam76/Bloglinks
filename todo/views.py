@@ -10,3 +10,4 @@ def get_todo_list(request):
         'items': items
     }
     return render(request, 'todo/todo_list.html', context)
+    
