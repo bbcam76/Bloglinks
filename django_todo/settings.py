@@ -36,7 +36,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 ALLOWED_HOSTS = ['bloglinks.herokuapp.com', 'localhost',
                  'localhost:8000', '127.0.0.1', '127.0.0.1:8000']
-
+CSRF_TRUSTED_ORIGINS = ['https://8000-funtari76-bloglinks-p26x6b8e9kr.ws-eu93.gitpod.io/',
+                            'https://8000-https://bloglinks.herokuapp.com/']
 
 # Application definition
 
