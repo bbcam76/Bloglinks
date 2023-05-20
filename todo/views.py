@@ -2,7 +2,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Bloglinks
-from .form import CommentForm
+from .forms import CommentForm
 
 
 class PostList(generic.ListView):
