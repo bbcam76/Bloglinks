@@ -18,8 +18,8 @@ if os.path.isfile("env.py"):
     import env  # noqa
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+# DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = 'DEBUG' in os.environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -35,10 +35,15 @@ else:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-ALLOWED_HOSTS = ['bloglinks.herokuapp.com', 'localhost',
-                 'localhost:8000', '127.0.0.1', '127.0.0.1:8000', '8000-funtari76-bloglinks-p26x6b8e9kr.ws-eu97.gitpod.io']
-CSRF_TRUSTED_ORIGINS = ['https://8000-funtari76-bloglinks-p26x6b8e9kr.ws-eu93.gitpod.io/',
-                            'https://8000-https://bloglinks.herokuapp.com/']
+ALLOWED_HOSTS = [
+    'bloglinks.herokuapp.com', 'localhost', 'localhost:8000', '127.0.0.1',
+    '127.0.0.1:8000', '8000-funtari76-bloglinks-p26x6b8e9kr.ws-eu97.gitpod.io'
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-funtari76-bloglinks-p26x6b8e9kr.ws-eu93.gitpod.io/',
+    'https://8000-bloglinks.herokuapp.com/'
+]
 
 # Application definition
 
