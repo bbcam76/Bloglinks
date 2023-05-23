@@ -2,7 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+
 STATUS = ((0, "Draft"), (1, "Published"))
+
 
 class Post(models.Model):
     title = models.CharField(max_length=175, unique=True)
@@ -19,7 +21,7 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created_on']
 
-    def __st__(self):
+    def __str__(self):
         return self.title
 
     def number_of_likes(self):
@@ -28,12 +30,14 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
-    name = models.EmailField()
+    name = models.EmailField(max_length=80)
+    email = models.EmailField(null=True)
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
 
     class Meta:
         ordering = ["created_on"]
 
-    def __st__(self):
+    def __str__(self):
         return f"Comment {self.body} by {self.name}"
