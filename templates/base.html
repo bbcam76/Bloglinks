@@ -26,7 +26,7 @@
 <body>
 <!-- Navbar from getbootstrap.com -->
 <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'home' %}">Bloglinks</a>
+    <a class="navbar-brand" href="{% url 'blog' %}">Bloglinks</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'blog' %}">Home <span class="sr-only">(current)</span></a>
             </li>
             {% if user.is_authenticated %}
             <li class="nav-item">

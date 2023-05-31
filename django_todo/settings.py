@@ -37,7 +37,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 ALLOWED_HOSTS = [
     'bloglinks.herokuapp.com', 'localhost', 'localhost:8000', '127.0.0.1',
-    '127.0.0.1:8000', '8000-funtari76-bloglinks-p26x6b8e9kr.ws-eu97.gitpod.io'
+    '127.0.0.1:8000', '8000-funtari76-bloglinks-p26x6b8e9kr.ws-eu97.gitpod.io',
+    '8000-funtari76-bloglinks-p26x6b8e9kr.ws-eu98.gitpod.io'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
@@ -62,7 +63,6 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_summernote',
     'crispy_forms',
-    'home',
     'todo',
 
     # Static storages
