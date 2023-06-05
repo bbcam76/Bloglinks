@@ -64,6 +64,20 @@ class PostDetail(View):
             },
         )
 
+def home(request):
+    return render(request, 'todo/home.html')
+
+class postLike(View):
+
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exist():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 def get_todo_list(request):
     """ Function to render the todo list """
     items = Bloglinks.objects.all()  # noqa
