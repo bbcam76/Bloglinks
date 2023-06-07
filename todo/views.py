@@ -1,6 +1,7 @@
 """Todo app models"""
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Bloglinks
 from .forms import CommentForm
 
@@ -67,7 +68,7 @@ class PostDetail(View):
 def home(request):
     return render(request, 'todo/home.html')
 
-class postLike(View):
+class PostLike(View):
 
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
